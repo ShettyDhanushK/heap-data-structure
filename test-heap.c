@@ -165,7 +165,7 @@ void bubble_down(minHeap *heap, int index)
     c = leftChild(index);
     min_index = index;
 
-    for(int i = 0; i < 1; i++)
+    for(int i = 0; i <= 1; i++)
     {
         if((c+i) <= heap->currSize)
         {
@@ -220,7 +220,7 @@ int extractMin(minHeap *heap)
 {
     int min = -1;
 
-    if(heap->currSize == 0)
+    if(heap->currSize <= 0)
     {
         printf("Warning: Priority Queue Underflow!\n");
     }

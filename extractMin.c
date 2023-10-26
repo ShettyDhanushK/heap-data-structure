@@ -16,7 +16,7 @@ void bubble_down(minHeap *heap, int index)              //Takes minHeap struc an
     c = leftChild(index);                               //index of the left child is assigned
     min_index = index;                                  //At the beginning, current element is the minimum element we know
 
-    for(int i = 0; i < 1; i++)                          //Loops 2 times, one for the left_child and other for the right_child
+    for(int i = 0; i <= 1; i++)                          //Loops 2 times, one for the left_child and other for the right_child
     {
         if((c+i) <= heap->currSize)                     //checks if left_child or right_child (depending upon i) exists
         {
@@ -40,7 +40,7 @@ int extractMin(minHeap *heap)                           //Takes minHeap structur
 {
     int min = -1;                                       //At first minHeap is set to -1
 
-    if(heap->currSize == 0)                             //Check if heap is empty
+    if(heap->currSize <= 0)                             //Check if heap is empty
     {
         printf("Warning: Priority Queue Underflow!\n"); //If yes, no element is returned
     }
